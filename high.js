@@ -20,7 +20,7 @@ $(function () {
             map.fitBounds([
             [22.2289, -154.8],[18.948, -159.764]
             ]);
-                        selectstate();
+            selectstate();
 
         });
         $('#usa').click(function(e) {

@@ -113,10 +113,10 @@
 			activedom = layer;
 
 			layer.setStyle({
-				weight: 10,
+				weight: 7,
 				opacity: 1,
 				color: 'white',
-				dashArray: '1,17',
+				dashArray: '1,12',
 				fillOpacity: '0'
 			});
 
