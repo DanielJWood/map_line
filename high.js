@@ -1,4 +1,4 @@
-var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010]];
+var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010, 2011]];
 
 var items = [[1,2],[3,4],[5,6]];
 
@@ -52,17 +52,22 @@ else {
     var layer = statesData.features[51];
 };
 
+//add current value to box at lower left.
+expend.innerHTML = '$' + layer.properties.datapoint[41];
+statename.innerHTML = layer.properties.name;
 
-    $('#container').highcharts({
+
+    $('#containerz').highcharts({
         chart: {
             type: 'line',
-            marginRight: 0,
+            marginRight: 10,
+            marginLeft: 40,
             marginBottom: 50,
             backgroundColor: '#494947',
-
-        },
+            borderRadius: 0        
+            },
         title: {
-            text: 'Price for million BTU of coal in ' + layer.properties.name,
+            text: 'Per Capita Energy Expenditure in ' + layer.properties.name + ' 1970 - 2011',
             x: -20, //center
             style: {
                 color: '#ffffff'
@@ -74,12 +79,12 @@ else {
             tickInterval: 10,
             endOnTick: false,
             startOnTick: false,
-            title: {
-                text: 'Year',
+            tickPosition: 'inside',
+            labels: {
                 style: {
-                    color: '#ffffff'
-                }   
-            },
+                    color: '#fff'
+                }
+            }
         },
         yAxis: {
             endOnTick: false,
@@ -89,6 +94,10 @@ else {
                 style: {
                     color: '#ffffff'
                 }   
+            },labels: {
+                style: {
+                    color: '#fff'
+                }
             },
             plotLines: [{
                 value: 0,
@@ -97,7 +106,7 @@ else {
             }]
         },
         tooltip: {
-            valueSuffix: ' dollars per million BTU'
+            valueSuffix: ' dollars per person per year'
         },
         legend: {
             enabled: false,

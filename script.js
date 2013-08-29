@@ -15,20 +15,8 @@
 
 		// control that shows state info on hover
 		var info = L.control();
+		var info2 = L.control();
 
-		info.onAdd = function (map) {
-			this._div = L.DomUtil.create('div', 'info');
-			this.update();
-			return this._div;
-		};
-
-		info.update = function (props) {
-			this._div.innerHTML = '<h4>Energy Expenditure per person</h4>' +  (props ?
-				'<b>' + props.name + '</b><br />$' + props.datapoint[40] + ' per person'
-				: 'Click on a state');
-		};
-
-		info.addTo(map);
 
 
 		// get color depending on population density value
@@ -120,7 +108,7 @@
 				fillOpacity: '0'
 			});
 
-			info.update(layer.feature.properties);
+			//info.update(layer.feature.properties);
 
 			map.fitBounds(e.target.getBounds());
 
@@ -145,14 +133,14 @@
 			onEachFeature: onEachFeature
 		}).addTo(map);
 
-		map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+		//map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
 
 		var legend = L.control({position: 'bottomright'});
 
 		legend.onAdd = function (map) {
 
-			var div = L.DomUtil.create('div', 'info legend'),
+			var div = L.DomUtil.create('div', 'info legendz'),
 				grades = [2000, 3000, 3500, 4000, 4500, 5000, 6000],
 				labels = [],
 				from, to;
@@ -162,8 +150,8 @@
 				to = grades[i + 1];
 
 				labels.push(
-					'<i style="background:' + getColor(from + 0.1) + '"></i> ' +
-					from + (to ? '&ndash;' + to : '+'));
+					'<i style="background:' + getColor(from + 0.1) + '"></i> $' +
+					from + (to ? '&ndash; $' + to : '+'));
 			}
 
 			div.innerHTML = labels.join('<br>');
