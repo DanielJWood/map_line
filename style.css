@@ -57,7 +57,7 @@ Map
     width: 100%;
     height: 800px;
  }
- #map { position:absolute; top:0; height: 500px; width:100%; }
+ #map { position:absolute; top:0; height: 500px; width:100%; border: 4px solid #333;}
 
  #highcont {
  	position: relative;
@@ -73,7 +73,6 @@ Map
  right:0;
  width:200px;
  height:200px;
- background-color: blue;
 } 
 
 
@@ -193,23 +192,49 @@ info tab below rap
 			position: relative;
 		 	float: left;
 		 	width: 35%;
-			background-color: #494947;
+			
 			/*494947 2f2f2e*/
-			height: 350px;
-			top: -50px;
+			height: 300px;
+			/*top: -50px;*/
+			top:0px;
 			color: #fff;
 		}
 
 		#statecont h1 {
 			color: #fff;
-			text-align: center;
 			font-size: 38px;
 			line-height: 50px;
 			margin-top: 2px;
+			font-family: 'Avenir LT W02 35 Light',verdana,sans-serif;
+		}
+
+		#sci {
+			top:-15px;
+			position: relative;
+			min-width: 35%;
+			background-image: url('img/cartographer.png');
+	background-repeat: repeat;
+			float: left;
+			text-align: center;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
 
 		#statecont {
-			min-height: 85px;
+			width: 1000px;
+			position:relative;
+			top:450px;
+			margin: 0 auto;
+			z-index: 9999
+		}
+
+		#statecont_inner {
+			position:relative;
+			top:0px;
+			left:0px;
+			width: 96%;
+			margin: 0 auto;
+			text-align: left
 		}
 
 		#m3a h2 {
@@ -267,21 +292,23 @@ info tab below rap
 		}
 
 		#informz3 {
-			 position:relative;
-			 top:0px;
-			 left:0px;
-			 width: 95%;
-			 margin: 0 auto;
-			 height: 300px;
-			 -moz-box-shadow: 0 0 5px #111;
--webkit-box-shadow: 0 0 5px #111;
-box-shadow: 0 0 5px #111;
+			background-image: url('img/cartographer.png');
+			background-repeat: repeat;
+			position:relative;
+			top:0px;
+			left:0px;
+			width: 95%;
+			margin: 0 auto;
+			height: 300px;
+			 -moz-box-shadow: 0 0 14px #111;
+			-webkit-box-shadow: 0 0 14px #111;
+			box-shadow: 0 0 14px #111;
 		}
 
 		#informz2 {
 			width: 1000px;
 			position:relative;
-			top:500px;
+			top:504px;
 			margin: 0 auto;
 		}
 
@@ -290,15 +317,18 @@ Bars and stuff, upper right
 *********/
 .leaflet-bar {
 	border-radius: 0;
-	background-color: #494947;
+	background-image: url('img/cartographer.png');
+	background-repeat: repeat;	
 	border: none;
 	margin-left: 0px;
-	box-shadow: 0px;
-
+	border-radius: 0px;
+	-moz-box-shadow: 0 0 5px #111;
+			-webkit-box-shadow: 0 0 5px #111;
+			box-shadow: 0 0 5px #111;
 }
 
 .leaflet-bar a, .leaflet-bar a:hover {
-	background-color: #494947;
+	background-color: transparent;
 	border-radius: none;
 	color: #fff !important;
 	width: 56px;
@@ -311,7 +341,7 @@ Bars and stuff, upper right
 	}
 
 .leaflet-bar a:hover {
-	background-color: #3c3c3a;
+	background-color: #1E1E1E !important;
 	border-radius: none !important	;
 	}
 
@@ -320,7 +350,7 @@ Responsive
 ***/
 
 	@media (max-width: 1000px) {
-        #informz2 {
+        #statecont, #informz2 {
         	width: 100%;
         }
         #m3a h2 {

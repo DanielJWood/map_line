@@ -63,7 +63,7 @@ statename.innerHTML = layer.properties.name;
             marginRight: 10,
             marginLeft: 40,
             marginBottom: 50,
-            backgroundColor: '#494947',
+            backgroundColor: 'transparent',
             borderRadius: 0        
             },
         title: {

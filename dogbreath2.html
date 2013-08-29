@@ -24,10 +24,9 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 	<style type="text/css">
 		#m3a {
-            font-weight: bold;
             font-family: 'Avenir LT W02 85 Heavy', verdana, sans-serif;
-
         }
+body { background-color: #494947}
 
 	</style>
 
@@ -38,15 +37,22 @@
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <div id="master_container">
-  <div id="map"></div>
+
+  <div id="map">
+    <div id="statecont">
+        <div id="statecont_inner">
+            <div id="sci">
+                <h1 id="statename">U.S.A.</h1>
+            </div>
+        </div>
+    </div>
+  </div>
 
   <div id="informz">
     <div id="informz2">
       <div id="informz3">
         <div class="belowblock" id="m3a">
-          <div id="statecont">
-            <h1 id="statename">U.S.A.</h1>
-          </div>
+          
           <div id="informz4">
             <p>Energy Expenditure</p>
               <div class="linesss" id="lineboxhorz"></div>
@@ -65,7 +71,7 @@
   </div>
   <div class="leaflet-control-container">
     <div class="leaflet-top leaflet-left">
-      <div style="top: 65px;" class="leaflet-control-zoom leaflet-bar leaflet-control">
+      <div style="top: 64px;" class="leaflet-control-zoom leaflet-bar leaflet-control">
         <a id="usa" href="#"><img src="img/mainlaind2.png"></a>
         <a id="hawaii" href="#"><img src="img/hawaii3.png"></a>
         <a id="alaska" href="#"><img src="img/alaska2.png"></a>
