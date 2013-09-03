@@ -3,7 +3,7 @@ var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1
 var items = [[1,2],[3,4],[5,6]];
 
 $( document ).ready(function() {
-console.log(statesData.features[51].properties)
+
 
 onClickyhigh();
 
@@ -52,9 +52,17 @@ else {
     var layer = statesData.features[51];
 };
 
+expend = document.getElementById('expend');
+statename = document.getElementById('statename');
+legend_name = document.getElementById('legend_name');
+
 //add current value to box at lower left.
 expend.innerHTML = '$' + layer.properties.datapoint[41];
 statename.innerHTML = layer.properties.name;
+
+legendput = "   <span style=\"color:#8BCC00; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
+
+if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties.name + legendput} else {legend_name.innerHTML = ''};
 
 
     $('#containerz').highcharts({
@@ -106,10 +114,12 @@ statename.innerHTML = layer.properties.name;
             }]
         },
         tooltip: {
-            valueSuffix: ' dollars per person per year'
+            valueSuffix: ' dollars per person per year',
+            borderRadius: 0,
+            borderColor: '#444444'
         },
         legend: {
-            enabled: false,
+            enabled: false
         },
         series: [{
             name: layer.properties.name,
@@ -117,7 +127,7 @@ statename.innerHTML = layer.properties.name;
             color: '#8BCC00', 
         },
         {
-            name: 'US Total',
+            name: 'U.S.A.',
             data: statesData.features[51].properties.datapoint,
             color: '#ff00ff',
         }],
