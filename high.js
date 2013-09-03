@@ -52,9 +52,9 @@ else {
     var layer = statesData.features[51];
 };
 
-expend = document.getElementById('expend');
-statename = document.getElementById('statename');
-legend_name = document.getElementById('legend_name');
+var expend = document.getElementById('expend');
+var statename = document.getElementById('statename');
+var legend_name = document.getElementById('legend_name');
 
 //add current value to box at lower left.
 expend.innerHTML = '$' + layer.properties.datapoint[41];
