@@ -359,6 +359,7 @@ line Legend
 
 #line_legend p {
 	display: block;
+	font-size: 16px;
 }
 
 /***

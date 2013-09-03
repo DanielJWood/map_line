@@ -34,13 +34,13 @@ $(function () {
     });
 
 function selectstate() {
-            if (activedom != undefined) {
+            if (activedom !== undefined) {
                 activedom.setStyle({
                     weight: 1,
                     dashArray: '3',
                     fillOpacity: '0.7'
                 });
-            }; 
+            } 
 }
 
 function onClickyhigh(e) {
@@ -62,7 +62,7 @@ statename.innerHTML = layer.properties.name;
 
 legendput = "   <span style=\"color:#8BCC00; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
 
-if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties.name + legendput} else {legend_name.innerHTML = ''};
+if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties.name + legendput;} else {legend_name.innerHTML = '';};
 
 
     $('#containerz').highcharts({
@@ -81,7 +81,6 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
                 color: '#ffffff'
             }
         },
-
         xAxis: {
             categories: test1[0],
             tickInterval: 10,

@@ -70,9 +70,6 @@
 				geojson.resetStyle(e.target);
 
 			}
-			//console.log(e.target._leaflet_id)
-
-			//console.log(activeid);
 
 			//info.update();   //Get's rid of update when leave state
 
