@@ -75,10 +75,17 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
             borderRadius: 0        
             },
         title: {
-            text: 'Per Capita Energy Expenditure in ' + layer.properties.name + ' 1970 - 2011',
-            x: -20, //center
+            floating: true,
+            text: 'Per Capita Energy Expenditure in ' + layer.properties.name,
             style: {
                 color: '#ffffff'
+            }
+        },
+        subtitle: {
+            text: '1970 - 2011',
+            floating: true,
+            style: {
+                color: '#fff'
             }
         },
         xAxis: {
