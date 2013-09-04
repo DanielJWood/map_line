@@ -184,19 +184,19 @@ info tab below rap
 		#m3a {
 			position: relative;
 		 	float: left;
-		 	width: 35%;
-			
+		 	width: 35%;	
 			/*494947 2f2f2e*/
 			height: 300px;
 			/*top: -50px;*/
 			top:0px;
 			color: #fff;
+			margin-top: 40px;
 		}
 
 		#statecont h1 {
 			color: #fff;
-			font-size: 38px;
-			line-height: 50px;
+			font-size: 138px;
+			line-height: 30px;
 			margin-top: 2px;
 			font-family: 'Avenir LT W02 35 Light',verdana,sans-serif;
 		}
@@ -205,9 +205,9 @@ info tab below rap
 			top: -2px;
 			position: relative;
 			min-width: 35%;
-			background-image: url('img/cartographer.png');
+			/*background-image: url('img/cartographer.png');
 			background-repeat: repeat;
-			background-position: left bottom;
+			background-position: left bottom;*/
 			float: left;
 			text-align: center;
 			padding-right: 10px;
@@ -355,6 +355,7 @@ line Legend
 	color: #fff;
 	margin-right: 30px;
 	text-align: right;
+	line-height: 9px;
 }
 
 #line_legend p {
