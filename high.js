@@ -71,7 +71,7 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
             marginRight: 10,
             marginLeft: 40,
             marginBottom: 50,
-            backgroundColor: 'transparent',
+            backgroundColor: null,
             borderRadius: 0        
             },
         title: {
