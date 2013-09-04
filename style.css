@@ -196,9 +196,10 @@ info tab below rap
 		#statecont h1 {
 			color: #fff;
 			font-size: 138px;
-			line-height: 30px;
+			line-height: 5px;
 			margin-top: 2px;
-			font-family: 'Avenir LT W02 35 Light',verdana,sans-serif;
+			font-family: 'Avenir LT W02 85 Heavy', verdana, sans-serif;
+			margin-left: -10px;
 		}
 
 		#sci {
@@ -209,9 +210,8 @@ info tab below rap
 			background-repeat: repeat;
 			background-position: left bottom;*/
 			float: left;
-			text-align: center;
 			padding-right: 10px;
-			padding-left: 10px;
+			padding-left: 0px;
 			left: -4px;
 		}
 
@@ -236,7 +236,7 @@ info tab below rap
 			color: #fff;
 			text-align: center;
 			font-size: 95px;
-			line-height: 100px;
+			line-height: 95px;
 			border-bottom: none;
 		}
 
@@ -245,6 +245,8 @@ info tab below rap
 			text-align: left;
 			display: inline;
 			padding-left: 3px;
+			font-family: 'Avenir LT W02 35 Light',verdana,sans-serif;
+
 		}	
 
 		#m3a p.riii {
@@ -259,31 +261,38 @@ info tab below rap
 
 		}
 
-		.lvert {
+		#lvert1 {
 			top: 0px;
 			height: 35px;
 			width: 1px;
-			margin: 0 auto;
+			left: 60%
+		}
+
+		#lvert2 {
+			top: 0px;
+			height: 35px;
+			width: 1px;
+			left: 40%
 		}
 
 		#lineboxhorz {
-			width: 50%;
+			width: 60%;
 			height: 1px;
 			left: 0px;
 			top:1px;
 		}
 
 		.lineboxhorz2 {
-			width: 50%;
+			width: 80%;
 			height: 1px;
 			margin: 0 auto;				
 			top:-1px;
 		}
 
 		#lineboxhorz3 {
-			width: 50%;
+			width: 60%;
 			height: 1px;
-			left: 50%;
+			left: 40%;
 			top: -2px;
 		}
 
@@ -373,46 +382,113 @@ Responsive
         }
         #m3a h2 {
         	font-size: 85px;
+        	line-height: 85px;
+        }
+        #m3a {
+        	margin-top: 50px;
         }
     } 
 
 	@media (max-width: 900px) {    
 		#m3a h2 {
 			font-size: 75px;
+			line-height: 75px;
+		}
+
+		/*Big font changes*/
+		#statecont h1 {
+			font-size: 121px;
+			margin-top: 7px;
+		}
+
+
+		/*Change lines for smaller screens, but will change back at 480*/
+		#lvert1 {
+			left: 70%
+		}
+
+		#lvert2 {
+			left: 30%
+		}
+
+		#lineboxhorz {
+			width: 70%;
+		}
+
+		.lineboxhorz2 {
+			width: 80%;
+		}
+
+		#lineboxhorz3 {
+			width: 70%;
+			left: 30%;
 		}
 	}
 
     @media (max-width: 768px) {
+		
+    	#statecont {
+    		top: 458px;
+    	}
 		#statecont h1 {
-	        font-size: 30px
-	    }        
+			font-size: 100px;
+			margin-top: 7px;
+		}
 	    #m3a h2 {
 	    	font-size: 65px;
+	    	line-height: 65px;
 	    }        
+
+	    #m3a p {
+	    	font-size: 17px;
+	    }
+
         #statecont_inner, #informz3 {
         	width: 100%;
         }
-
         #map {border: none;}
-        #m3a {top: 0px;}
+        #m3a {
+        	top: 0px;
+        	margin-top: 60px;
+         }
         #sci {left: 0px;}
         #informz2 {top: 500px;}
-
     } 
-
+    
+    @media (max-width: 768px) {
+    	#statecont h1 {
+			font-size: 80px;
+			margin-top: 14px;
+			margin-left: 0px;
+		}
+    }
+   
+   @media (max-width: 580px) {
+    	#statecont h1 {
+			font-size: 60px;
+			margin-top: 20px;
+		}
+    }
 
     @media (max-width: 480px) {
+        
         #map {
         	border: 1px;
         }
         #sci {
-		
-    	width: 100%;
-    	left: 0px;
+	    	width: 100%;
+	    	left: 0px;
         }
         #m3a {
         	top: 0px;
+        	width: 100%;
+        	margin-top: 10px;        	
         }
+
+        #informz3 {
+        	height: 515px;
+        }
+
         #containerz {
         	width: 100%;
         }
@@ -421,13 +497,57 @@ Responsive
         	top: 0px;
         }
         .belowblock {
-        	height: 200px !important;
+        	height: 200px !important; 
+        }
+        #containerz {
+        	height: 300px !important;
         }
         .leaflet-bottom {
 			bottom: 40px;
 		}
 		.leaflet-top {
 			top: -10px;
+		}
+		 #statecont h1 {
+			font-size: 52px;
+			margin-top: 23px;
+		}
+
+		#sci {
+/*			background-image: url('img/cartographer.png');
+			background-repeat: repeat;
+			background-position: left bottom;*/
+		}
+		.lineboxhorz2 {
+			width: 50%;
+		}
+		#m3a p {
+			font-size: 20px;
+		}
+
+	/*Change lines for smaller screens, but will change back at 480*/
+		#lvert1 {
+			left: 60%
+		}
+
+		#lvert2 {
+			left: 40%
+		}
+
+		#lineboxhorz {
+			width: 60%;
+		}
+
+		.lineboxhorz2 {
+			width: 50%;
+		}
+
+		#lineboxhorz3 {
+			width: 60%;
+			left: 40%;
+		}
+		#line_legend {
+			bottom: 63px;
 		}
 
     }
