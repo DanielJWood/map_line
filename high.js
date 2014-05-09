@@ -28,6 +28,8 @@ $(function () {
             [42.461, -56.979],[32.536, -134.4]
             ]);
             var e = null;
+            $('.legendz').removeClass('active')
+            p = 0;
             onClickyhigh();
             selectstate();
         });
@@ -103,6 +105,9 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
         yAxis: {
             endOnTick: false,
             startOnTick: false,
+            min: 0,
+            max: 2650,
+            // tickInterval: 500,
             title: {
                 text: '',
                 style: {

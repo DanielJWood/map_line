@@ -1,4 +1,6 @@
-
+		var d = document.getElementById("click-here");
+		var c = document.getElementsByClassName("legendz");
+		var p = 0;
 
 		var map = L.map('map', {
 			scrollWheelZoom: false
@@ -12,6 +14,10 @@
 			//styleId: 22677
 		}).addTo(map);
 
+
+		//Prevent dragging and zooming
+		map.dragging.disable();
+		map.touchZoom.disable();
 
 		// control that shows state info on hover
 		var info = L.control();
@@ -79,6 +85,14 @@
 		} 
 
 		function onClicky(e) {
+			//only add "active" after first click.
+			p += 1;
+			if (p == 1) {
+				c[0].className = c[0].className + "  active";
+				d.className = d.className + "  active";
+			};
+			
+
 
 			//this clears the current highlighting on click, if there is something already highlighted.
 			if (activedom != undefined) {
