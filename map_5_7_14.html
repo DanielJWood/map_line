@@ -49,12 +49,19 @@ body { background-color: #494947;}
 /*]]>*/-->
 </style>
 <link type="text/css" rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="leaflet.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_xEha32p3r_SWNDY2T700ER6I6kMtW8mIHMdi3KIRe_c.css" media="all" />
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_QZCXcDlZhm2RW7NW8bBmDxIV6lSnGlqD8cug-NzqeEE.css" media="all" />
+    
+    <link rel="stylesheet" type="text/css" href="leaflet.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
   <meta name="viewport" content="width=device-width, maximum-scale=2, minimum-scale=1, initial-scale=1, user-scalable=yes" />
+
+
 </head>
+
+
 <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-288229 node-type-map energy-dark group-context group-context-group-1 group-context-taxonomy-term group-context-taxonomy-term-31" >
   <div id="skip-link">
     <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
@@ -357,11 +364,14 @@ body { background-color: #494947;}
         </div>
       </div>  
       <div id="click-here" class="leaflet-top leaflet-right">
-        <div class="info leaflet-control">
-          <h4>Energy Expenditure per person</h4>
-          <p>Click on a state</p>
-        </div>
-      </div>    
+        <div id="click-inner" class="info leaflet-control">
+          <div id="click-double-inner">
+            <h4>Energy Expenditure per person</h4>
+            <p>Click on a state</p>
+          </div>            
+          <div id="statename2"></div>
+        </div>      
+      </div>        
     </div>
   </div>
   <div id="informz2">

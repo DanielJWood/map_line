@@ -1,5 +1,6 @@
-		var d = document.getElementById("click-here");
+		var d = document.getElementById("click-double-inner");
 		var c = document.getElementsByClassName("legendz");
+		var b = document.getElementById("statename2");
 		var p = 0;
 
 		var map = L.map('map', {
@@ -61,7 +62,7 @@
 				layer.bringToFront();
 			}
 
-			//info.update(layer.feature.properties);
+			// info.update(layer.feature.properties);
 		}
 
 		var geojson;
@@ -88,6 +89,7 @@
 			//only add "active" after first click.
 			p += 1;
 			if (p == 1) {
+				b.className = b.className + "  active";
 				c[0].className = c[0].className + "  active";
 				d.className = d.className + "  active";
 			};

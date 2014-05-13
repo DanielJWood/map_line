@@ -56,12 +56,16 @@ else {
 
 var expend = document.getElementById('expend');
 var statename = document.getElementById('statename');
+var statename2 = document.getElementById('statename2');
 var legend_name = document.getElementById('legend_name');
+
+
 
 //add current value to box at lower left.
 expend.innerHTML = '$' + layer.properties.datapoint[41];
 statename.innerHTML = layer.properties.name;
-
+statename2.innerHTML = layer.properties.name + '<br>$' + layer.properties.datapoint[41];
+// click_inner.innerHTML = '<h4>' + layer.properties.name + '</h4>';
 legendput = "   <span style=\"color:#8BCC00; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
 
 if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties.name + legendput;} else {legend_name.innerHTML = '';};
