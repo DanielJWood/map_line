@@ -75,7 +75,7 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
         chart: {
             type: 'line',
             marginRight: 10,
-            marginLeft: 40,
+            marginLeft: 50,
             marginBottom: 50,
             backgroundColor: null,
             borderRadius: 0        
@@ -119,8 +119,9 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
                 }   
             },labels: {
                 style: {
-                    color: '#fff'
-                }
+                    color: '#fff'                    
+                },
+                format: '${value}'
             },
             plotLines: [{
                 value: 0,
