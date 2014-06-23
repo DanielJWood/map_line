@@ -1,4 +1,4 @@
-var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010, 2011]];
+var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1983,1984,1985,1986,1987,1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010, 2011, 2012]];
 
 var items = [[1,2],[3,4],[5,6]];
 
@@ -62,9 +62,9 @@ var legend_name = document.getElementById('legend_name');
 
 
 //add current value to box at lower left.
-expend.innerHTML = '$' + layer.properties.datapoint[41];
+expend.innerHTML = '$' + layer.properties.datapoint[42];
 statename.innerHTML = layer.properties.name;
-statename2.innerHTML = layer.properties.name + '<br>$' + layer.properties.datapoint[41];
+statename2.innerHTML = layer.properties.name + '<br>$' + layer.properties.datapoint[42];
 // click_inner.innerHTML = '<h4>' + layer.properties.name + '</h4>';
 legendput = "   <span style=\"color:#8BCC00; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
 
@@ -88,7 +88,7 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
             }
         },
         subtitle: {
-            text: '1970 - 2011',
+            text: '1970 - 2012',
             floating: true,
             style: {
                 color: '#fff'
