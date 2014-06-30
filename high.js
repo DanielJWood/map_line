@@ -62,13 +62,13 @@ var legend_name = document.getElementById('legend_name');
 
 
 //add current value to box at lower left.
-expend.innerHTML = '$' + layer.properties.datapoint[42];
+expend.innerHTML = '$' + layer.properties.total[42];
 statename.innerHTML = layer.properties.name;
-statename2.innerHTML = layer.properties.name + '<br>$' + layer.properties.datapoint[42];
+statename2.innerHTML = layer.properties.name + '<br>$' + layer.properties.total[42];
 // click_inner.innerHTML = '<h4>' + layer.properties.name + '</h4>';
-legendput = "   <span style=\"color:#8BCC00; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
+legendput ="Combined <span style=\"color:#ff00ff; font-size: 9px; font-weight: bold; \">▀▀▀▀▀</span>";
 
-if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties.name + legendput;} else {legend_name.innerHTML = '';};
+legend_name.innerHTML = legendput;
 
 
     $('#containerz').highcharts({
@@ -110,7 +110,7 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
             endOnTick: false,
             startOnTick: false,
             min: 0,
-            max: 2650,
+            // max: 3050,
             // tickInterval: 500,
             title: {
                 text: '',
@@ -139,14 +139,20 @@ if (layer.properties.name != "U.S.A.") {legend_name.innerHTML = layer.properties
         },
         series: [{
             name: layer.properties.name,
-            data: layer.properties.datapoint,
-            color: '#8BCC00', 
+            data: layer.properties.total,
+            color: '#ff00ff', 
         },
         {
-            name: 'U.S.A.',
-            data: statesData.features[51].properties.datapoint,
-            color: '#ff00ff',
-        }],
+            name: "Residential",
+            data: layer.properties.residential,
+            color: '#0000ff', 
+        },
+        {
+            name: "Transportation",
+            data: layer.properties.transportation,
+            color: '#8BCC00', 
+        }
+        ],
         plotOptions: {
             line: {
                 lineWidth: 4,

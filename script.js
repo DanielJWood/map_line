@@ -28,12 +28,11 @@
 
 		// get color depending on population density value
 		function getColor(d) {
-			return d > 2000    ? '#BD0026' :
-			       d > 1800    ? '#E31A1C' :
-			       d > 1600    ? '#FC4E2A' :
-			       d > 1300    ? '#FD8D3C' :
-			       d > 1000    ? '#FEB24C' :
-			       d > 800    ? '#FED976' :
+			return d > 5500    ? '#E31A1C' :
+			       d > 3500    ? '#FC4E2A' :
+			       d > 3000   ? '#FD8D3C' :
+			       d > 2000    ? '#FEB24C' :
+			       d > 1000	   ? '#FED976' :
 			                     '#FFEDA0' ;
 		}
 
@@ -44,7 +43,7 @@
 				color: 'white',
 				dashArray: '10,5',
 				fillOpacity: 0.7,
-				fillColor: getColor(feature.properties.datapoint[42])
+				fillColor: getColor(feature.properties.total[42])
 			};
 		}
 
@@ -153,7 +152,7 @@
 		legend.onAdd = function (map) {
 
 			var div = L.DomUtil.create('div', 'info legendz'),
-				grades = [800, 1100, 1300, 1600, 1800, 2000],
+				grades = [1000, 2000, 3000, 3500, 5500],
 				labels = [],
 				from, to;
 
