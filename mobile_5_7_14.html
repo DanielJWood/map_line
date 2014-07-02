@@ -33,7 +33,7 @@
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_Y12vx78-wi0Qzs_blX5H6PDdAbNAJOSUYqqQSplxnIY.css" media="all" />
 <link type="text/css" rel="stylesheet" href="//fast.fonts.com/t/1.css?apiType=css&amp;projectid=b893a4ff-9ea3-4ce8-bf77-c8d3e3a3de97" media="all" />
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_p4_C3hA3pQ1Xm6odhfnBxnmoIAlgmficgmhj9QPOknQ.css" media="all" />
-<link type="text/css" rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css" media="all" />
+<!-- <link type="text/css" rel="stylesheet" href="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css" media="all" /> -->
     <link rel="stylesheet" type="text/css" href="leaflet.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 <style type="text/css" media="all">
@@ -48,6 +48,15 @@ body { background-color: #494947;}
 
 /*]]>*/-->
 </style>
+<!--[if lt IE 9]>
+<style type="text/css">
+  #master_container {display: none;}  
+  #fallback img {
+    display: block;
+  }
+</style>
+<![endif]-->
+
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_Owz4KUqcT2AfxVtHKS2IbJ--UG36mIXFfvQLELeHtMg.css" media="all" />
 <link type="text/css" rel="stylesheet" href="http://energy.gov/sites/prod/files/css/css_QZCXcDlZhm2RW7NW8bBmDxIV6lSnGlqD8cug-NzqeEE.css" media="all" />
   <meta name="viewport" content="width=device-width, maximum-scale=2, minimum-scale=1, initial-scale=1, user-scalable=yes" />
@@ -251,7 +260,9 @@ body { background-color: #494947;}
     <div class="content">
     <div class="field field-name-field-map-map field-type-energy-map field-label-hidden"><div class="field-items"><div  class="field-item odd">	
 
-
+<div id="fallback">
+  <img src="img/fallback.jpg">
+</div>
 <div id="master_container">
   <div id="map">
     <div id="statecont">
@@ -486,17 +497,19 @@ body { background-color: #494947;}
 <script type="text/javascript" src="http://energy.gov/sites/all/themes/energy/scripts/energy.js?n580sv"></script>
 <script type="text/javascript" src="http://energy.gov/sites/prod/files/js/js_Byz3IZHVoyxgPAHbz5--_S8zGQwtvC3DG9wRwmAwwk4.js"></script>
 <script type="text/javascript" src="http://energy.gov/sites/prod/files/js/js_YcmQx_kHbG2xaivdfI-77Ja7VXFIMQ0kqhJfNCohFR4.js"></script>
-<script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js"></script>
+<!-- <script type="text/javascript" src="http://api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js"></script> -->
 
 
-    <script type="text/javascript" src="states_combined_6_26_14.js"></script>
+    <!-- // <script type="text/javascript" src="states_combined_6_26_14.js"></script> -->
 
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
   <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>
 <script src="js/highcharts.js"></script>
-<script type="text/javascript" src="high.js"></script>
-<script type="text/javascript" src="script.js"></script>
+<!-- <script type="text/javascript" src="high.js"></script>
+<script type="text/javascript" src="script.js"></script> -->
+<script type="text/javascript" src="combined.js"></script>
+
 <script type="text/javascript">
 <!--//--><![CDATA[//><!--
 jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"energy","theme_token":"HEkb-TrX3mEtspeG9kvReXu0TyAL9Qjo5ZlGuN812uA","js":{"sites\/all\/themes\/energy\/scripts\/loader.js":1,"sites\/all\/modules\/custom\/energy_core\/js\/event_tracking.js":1,"sites\/all\/modules\/custom\/energy_core\/js\/related_content_tracking.js":1,"sites\/all\/modules\/custom\/energy_core\/js\/breadcrumb_tracking.js":1,"0":1,"sites\/all\/themes\/energy\/scripts\/vertical_image.js":1,"sites\/all\/themes\/energy\/scripts\/modernizr\/modernizr-custom.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.8\/jquery.min.js":1,"misc\/jquery.once.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.core.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.widget.min.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.button.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.mouse.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.draggable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.position.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.resizable.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/ui\/minified\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/contrib\/environment_indicator\/environment_indicator.js":1,"sites\/all\/modules\/contrib\/environment_indicator\/color.js":1,"sites\/all\/themes\/energy\/scripts\/navigation.js":1,"sites\/all\/themes\/energy\/scripts\/energy.js":1,"sites\/all\/modules\/contrib\/ext_link_page\/ext_link_page.js":1,"sites\/all\/modules\/contrib\/image_caption\/image_caption.min.js":1,"sites\/all\/modules\/contrib\/field_group\/field_group.js":1,"sites\/all\/modules\/contrib\/wysiwyg_tools_plus\/js\/tab_builder.js":1,"sites\/all\/themes\/energy\/scripts\/placeholder_shim.js":1,"sites\/all\/themes\/energy\/scripts\/oms.min.js":1,"sites\/all\/themes\/energy\/scripts\/jquery.flexslider.js":1},"css":{"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/calendar\/css\/calendar_multiday.css":1,"sites\/all\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/all\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/contrib\/environment_indicator\/environment_indicator.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"\/\/fast.fonts.com\/t\/1.css?apiType=css\u0026projectid=b893a4ff-9ea3-4ce8-bf77-c8d3e3a3de97":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/custom\/energy_content\/css\/wysiwyg.css":1,"0":1,"sites\/all\/modules\/contrib\/field_group\/field_group.css":1,"sites\/all\/modules\/contrib\/wysiwyg_tools_plus\/css\/wysiwyg_tools_plus.css":1,"sites\/all\/themes\/energy\/style\/energy.css":1}},"energy_content":{"nid":"807916","base_url":"http:\/\/energy.gov","toggle_tophero_frontpage":1},"drupal_ga_accounts":["UA-17192165-1"],"energyCore":{"pageTitle":"EM Historical Timeline"},"ext_link_page":{"pathLinkPage":"\/exit","messageTitle":"You are now leaving Energy.gov","messageBody":"\u003Cstrong\u003EYou will be automatically redirected to:\u003C\/strong\u003E\u003Cbr \/\u003E\n  [link]\u003Cbr \/\u003E\n  in [delay] seconds\u003Cspan class=\u0022ext-link-modal-message\u0022\u003E or you may click \u0022Continue to the Site\u0022\u003C\/span\u003E.\n","extLinkClass":"ext","directDisable":0,"delay":10,"siteName":"Department of Energy"},"heroVertical":{"limitVertical":[]},"og":{"og_context":{"gid":"85","etid":"429949","entity_type":"taxonomy_term","label":"Office of Environmental Management","state":"1","created":"1311597471","rdf_mapping":[]}}});

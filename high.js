@@ -2,12 +2,17 @@ var test1 = [[1970,1971,1972,1973,1974,1975,1976,1977,1978,1979,1980,1981,1982,1
 
 var items = [[1,2],[3,4],[5,6]];
 
+(function ($) { 
 $( document ).ready(function() {
 
 
 onClickyhigh();
 
 });
+}(jQuery));  
+
+
+(function ($) { 
 
 $(function () {
         $('#alaska').click(function(e) {
@@ -34,6 +39,7 @@ $(function () {
             selectstate();
         });
     });
+}(jQuery));  
 
 function selectstate() {
             if (activedom !== undefined) {
@@ -70,6 +76,8 @@ legendput ="Combined <span style=\"color:#ff00ff; font-size: 9px; font-weight: b
 
 legend_name.innerHTML = legendput;
 
+(function ($) {
+$(document).ready(function() {
 
     $('#containerz').highcharts({
         chart: {
@@ -162,4 +170,7 @@ legend_name.innerHTML = legendput;
             }
         }
     });
+ });
+}(jQuery));    
+
 };
